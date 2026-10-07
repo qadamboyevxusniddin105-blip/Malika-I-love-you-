@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Malika, will you be mine? 🐾💕</title>
+    <meta name="description" content="Faqat Malika uchun maxsus yaratilgan romantik va interaktiv veb-sayt." />
+    <meta property="og:title" content="Malika, will you be mine? 🐾💕" />
+    <meta property="og:description" content="Faqat Malika uchun maxsus yaratilgan romantik va interaktiv veb-sayt." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800;900&family=Sacramento&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <style>
+      /* Fallback styles for static deployment without build */
+      .fallback-root {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem;
+        background: linear-gradient(135deg, #ffe4e6 0%, #fce7f3 45%, #fff1f2 100%);
+        font-family: 'Nunito', sans-serif;
+        position: relative;
+        overflow: hidden;
+      }
+      .fallback-badge {
+        position: absolute;
+        top: 1.5rem;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 0.4rem 1.2rem;
+        border-radius: 9999px;
+        font-size: 0.85rem;
+        font-weight: 800;
+        color: #be123c;
+        box-shadow: 0 4px 15px -3px rgba(244, 63, 94, 0.15);
+        border: 1px solid #fecdd3;
+      }
+      .fallback-card {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 36px;
+        padding: 2.5rem 2rem;
+        max-width: 460px;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 25px 60px -15px rgba(225, 29, 72, 0.22);
+        border: 1px solid #fff;
+        margin-top: 1.5rem;
+        z-index: 10;
+      }
+      .fallback-cat-box {
+        position: relative;
+        width: 220px;
+        height: 220px;
+        margin: 0 auto 1.5rem;
+        border-radius: 28px;
+        overflow: hidden;
+        border: 4px solid #fff;
+        box-shadow: 0 12px 25px -6px rgba(244, 63, 94, 0.2);
+        background: #fdf2f8;
+      }
+      .fallback-cat-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .fallback-cat-badge {
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: 800;
+        color: #e11d48;
+      }
+      .fallback-title {
+        font-family: 'Fredoka', cursive;
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: #881337;
+        margin-bottom: 0.35rem;
+        line-height: 1.2;
+      }
+      .fallback-sub {
+        font-size: 1rem;
+        color: #9f1239;
+        font-weight: 600;
+        margin-bottom: 2rem;
+      }
+      .fallback-btns {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.25rem;
+        min-height: 90px;
+        flex-wrap: wrap;
+      }
+      .fallback-yes {
+        background: linear-gradient(135deg, #f43f5e 0%, #e11d48 50%, #be123c 100%);
+        color: white;
+        font-family: 'Fredoka', sans-serif;
+        font-weight: 600;
+        font-size: 1.25rem;
+        padding: 0.85rem 2.25rem;
+        border: none;
+        border-radius: 9999px;
+        cursor: pointer;
+        box-shadow: 0 10px 25px -4px rgba(225, 29, 72, 0.45);
+        transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+        z-index: 20;
+      }
+      .fallback-no {
+        background: #f1f5f9;
+        color: #64748b;
+        font-weight: 700;
+        font-size: 1.05rem;
+        padding: 0.85rem 1.75rem;
+        border: 1px solid #e2e8f0;
+        border-radius: 9999px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        z-index: 10;
+        white-space: nowrap;
+      }
+      .fallback-reset {
+        margin-top: 1.5rem;
+        background: transparent;
+        color: #be123c;
+        border: 1.5px dashed #f43f5e;
+        border-radius: 9999px;
+        padding: 0.6rem 1.5rem;
+        font-size: 0.95rem;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .fallback-hidden {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body class="bg-gradient-to-br from-rose-100 via-pink-100 to-amber-50 min-h-screen text-slate-800 antialiased selection:bg-pink-300 selection:text-pink-900 overflow-x-hidden font-['Nunito',sans-serif]">
+    <div id="root">
+      <!-- Fallback UI displayed immediately even if uncompiled static deployment is used -->
+      <div class="fallback-root">
+        <div class="fallback-badge">
+          👑 Faqat Malika uchun maxsus 💕
+        </div>
+        <div class="fallback-card">
+          <div class="fallback-cat-box">
+            <img
+              id="fbCatImg"
+              class="fallback-cat-img"
+              src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3A4aGhkbDN3ZXFid3lva21pNm93eDVmaG5rY3YxMTB0dWppd3NscCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MDJ9IbxxvDUQM/giphy.gif"
+              alt="Cute Cat"
+            />
+            <div class="fallback-cat-badge" id="fbCatBadge">🐾 Serious Cat</div>
+          </div>
+          <h1 class="fallback-title" id="fbTitle">Malika, will you be mine? 💕</h1>
+          <p class="fallback-sub" id="fbSub">asked by a very small, very serious cat</p>
+          <div class="fallback-btns" id="fbBtns">
+            <button class="fallback-yes" id="fbYes">Yes 💕</button>
+            <button class="fallback-no" id="fbNo">No</button>
+          </div>
+          <div id="fbResetBox" class="fallback-hidden">
+            <button class="fallback-reset" id="fbReset">ask me again 🔄</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fallback interaction script (runs instantly if React hasn't replaced #root yet) -->
+    <script>
+      (function() {
+        var count = 0;
+        var phrases = [
+          "No",
+          "Are you sure, Malika? 🥺",
+          "Think again 🥺",
+          "Last chance, Malika! 🐾",
+          "Really sure? 💔",
+          "Don't break my heart! 😿",
+          "Look at this cute face! 🥺",
+          "Just say Yes! 💖",
+          "Meow? 🥺",
+          "You have no choice, Malika! 😻"
+        ];
+        var scales = [1, 1.25, 1.55, 1.9, 2.3, 2.8, 3.4, 4.0, 4.8];
+        var yesBtn = document.getElementById('fbYes');
+        var noBtn = document.getElementById('fbNo');
+        var catImg = document.getElementById('fbCatImg');
+        var catBadge = document.getElementById('fbCatBadge');
+        var title = document.getElementById('fbTitle');
+        var sub = document.getElementById('fbSub');
+        var resetBox = document.getElementById('fbResetBox');
+        var resetBtn = document.getElementById('fbReset');
+
+        if (!noBtn || !yesBtn) return;
+
+        noBtn.addEventListener('click', function() {
+          count++;
+          var s = scales[Math.min(count, scales.length - 1)];
+          yesBtn.style.transform = 'scale(' + s + ')';
+          noBtn.innerText = phrases[Math.min(count, phrases.length - 1)];
+
+          if (count >= 4) {
+            catImg.src = 'https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYnFwM2NycTZ4OTdzNXhxcmQydnZzZTVmZjFnZXVybnZjaGNsOHRrcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/BEob50R0O79CA/giphy.gif';
+            catBadge.innerText = '😿 Heartbroken';
+          } else if (count >= 1) {
+            catImg.src = 'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMnJ3ZnpnOXpnYnlrM2w4cGM4anl1aWp2anF4c3B0ZHA1cG40bHRsNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/OPU6wzx8JrHna/giphy.gif';
+            catBadge.innerText = '🥺 Pleading';
+          }
+
+          if (count >= 5) {
+            var rx = (Math.random() - 0.5) * 80;
+            var ry = (Math.random() - 0.5) * 50;
+            noBtn.style.transform = 'translate(' + rx + 'px, ' + ry + 'px)';
+          }
+        });
+
+        yesBtn.addEventListener('click', function() {
+          catImg.src = 'https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExbDVrMnhjNm4wNGprdW9xMmxld2phNGppMjE1dDZpZzE4eXFjc291OSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/T86i6yDyOYz7J6dPhf/giphy.gif';
+          catBadge.innerText = '😻 Pure Joy!';
+          title.innerText = "I knew it! You're mine now, Malika 😻";
+          sub.innerText = "purr-fect decision, malikam. 🐾✨";
+          noBtn.style.display = 'none';
+          yesBtn.style.transform = 'scale(1.1)';
+          yesBtn.innerText = 'Yaaay! 💕🎉';
+          resetBox.classList.remove('fallback-hidden');
+
+          if (typeof confetti === 'function') {
+            confetti({ particleCount: 150, spread: 80, origin: { y: 0.6 } });
+          }
+        });
+
+        if (resetBtn) {
+          resetBtn.addEventListener('click', function() {
+            count = 0;
+            catImg.src = 'https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3A4aGhkbDN3ZXFid3lva21pNm93eDVmaG5rY3YxMTB0dWppd3NscCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MDJ9IbxxvDUQM/giphy.gif';
+            catBadge.innerText = '🐾 Serious Cat';
+            title.innerText = 'Malika, will you be mine? 💕';
+            sub.innerText = 'asked by a very small, very serious cat';
+            noBtn.style.display = 'inline-block';
+            noBtn.style.transform = 'translate(0, 0)';
+            noBtn.innerText = 'No';
+            yesBtn.style.transform = 'scale(1)';
+            yesBtn.innerText = 'Yes 💕';
+            resetBox.classList.add('fallback-hidden');
+          });
+        }
+      })();
+    </script>
+
+    <!-- React entrypoint (takes over when Vite compiles) -->
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
